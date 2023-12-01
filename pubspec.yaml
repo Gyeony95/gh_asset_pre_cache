@@ -1,6 +1,6 @@
 name: gh_asset_pre_cache
 description: A plug-in that improves the usability and performance of the app by pre-caching assets used in the application.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Gyeony95/gh_asset_pre_cache
 
 environment:

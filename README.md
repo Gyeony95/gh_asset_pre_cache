@@ -1,4 +1,4 @@
-## Version 0.0.1 Release
+## Version 0.0.3 Release
 
 Automated Image Precache Feature Added: Automatically precache images from the application's asset folder to enhance performance.
 
