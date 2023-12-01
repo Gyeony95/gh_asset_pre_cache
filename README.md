@@ -8,7 +8,7 @@ Automated Image Precache Feature Added: Automatically precache images from the a
 
 ```dart
 dependencies:
-  gh_asset_pre_cache: ^0.0.1
+gh_asset_pre_cache: ^0.0.1
 ```
 
 2. Run the following command in the terminal to install the plugin.
@@ -29,7 +29,7 @@ void precacheImages() {
 ### What is Different?
 
 <p align="center">
-<img src="https://github.com/Gyeony95/gh_asset_pre_cache/assets/46639812/b066c552-8732-4e77-a8fb-9cc103249df5">
+<img src="https://github.com/Gyeony95/gh_asset_pre_cache/assets/46639812/b066c552-8732-4e77-a8fb-9cc103249df5" width = 200>
 </p>
 
 

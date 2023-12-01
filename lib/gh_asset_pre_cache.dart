@@ -38,13 +38,12 @@ class GhAssetPreCache {
 
   /// 이미지 전달받아서 캐싱함
   Future<void> _imageCache(String path, BuildContext context) async {
-    if(path.contains('cache') == false) return;
     bool isSvg = path.contains('.svg');
     if(isSvg){
       final loader = SvgAssetLoader(path);
       svg.cache.putIfAbsent(loader.cacheKey(null), () => loader.loadBytes(null));
     }else{
-      precacheImage(AssetImage(path), context).then((_) => debugPrint('cache done : $path'));
+      precacheImage(AssetImage(path), context);
     }
   }
 }

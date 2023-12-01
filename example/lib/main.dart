@@ -1,5 +1,4 @@
 import 'package:example/pages/image_cache_page.dart';
-import 'package:example/pages/image_non_cache_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gh_asset_pre_cache/gh_asset_pre_cache.dart';
 
@@ -20,7 +19,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const FeatureList(),
-        FeatureEnum.image.route: (context) => const ImageNonCachePage(),
         FeatureEnum.imageCache.route: (context) => const ImageCachePage(),
       },
     );
@@ -71,7 +69,6 @@ class FeatureList extends StatelessWidget {
 }
 
 enum FeatureEnum{
-  image('/image', 'image non cache'),
   imageCache('/imageCache', 'image cache');
 
   final String route;
