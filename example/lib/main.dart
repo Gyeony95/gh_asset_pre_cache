@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gh_asset_pre_cache/gh_asset_pre_cache.dart';
 
 void main() {
+  ImageCacheResource().startImageCache();
   runApp(const MyApp());
 }
 
@@ -26,13 +27,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+void containCheck(){
+  final ImageCache imageCache = PaintingBinding.instance.imageCache;
+  debugPrint('contain check : ${imageCache.liveImageCount}');
+}
 
 class FeatureList extends StatelessWidget {
   const FeatureList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    ImageCacheResource().startImageCache(context);
     return Scaffold(
       body: SafeArea(
         top: false,

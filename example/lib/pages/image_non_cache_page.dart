@@ -9,7 +9,7 @@ class ImageNonCachePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(FeatureEnum.image.name),),
       body: Center(
-        child: Image.asset('assets/big_size_img.jpg'),
+        child: Image.asset('assets/test.jpg'),
       ),
     );
   }

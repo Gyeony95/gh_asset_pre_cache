@@ -15,7 +15,15 @@ class ImageCacheResource {
   bool isInit = false;
 
 
-  Future<void> startImageCache(BuildContext context) async {
+  void startImageCache(){
+    final binding = WidgetsFlutterBinding.ensureInitialized();
+    binding.addPostFrameCallback((_) async {
+      BuildContext? context = binding.rootElement;
+      if(context != null) _startImageCache(context);
+    });
+  }
+
+  Future<void> _startImageCache(BuildContext context) async {
     if(isInit) return;
     isInit = true;
     final manifestJson = await DefaultAssetBundle.of(context).loadString('AssetManifest.json');
