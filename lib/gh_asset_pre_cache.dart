@@ -24,7 +24,7 @@ class ImageCacheResource {
     final Map<String, dynamic> manifestMap = json.decode(manifestJson);
     final imageList = manifestMap.keys.where((asset) => asset.startsWith('assets/images/')).toList();
     final svgList = manifestMap.keys.where((asset) => asset.startsWith('assets/svg_images/')).toList();
-
+    print('ghghgh $manifestJson');
     for (final imageUrl in imageList) {
       _imageCache(imageUrl, context);
     }
@@ -35,7 +35,8 @@ class ImageCacheResource {
 
   /// 이미지 전달받아서 캐싱함
   Future<void> _imageCache(String path, BuildContext context, {bool isSvg = false}) async {
-    if(path.contains('.png') == false && path.contains('.svg') == false) return;
+    if(path.contains('.jpg') == false && path.contains('.svg') == false) return;
+    if(path.contains('cache') == false) return;
     final ByteData data = await rootBundle.load(path);
     final List<int> bytes = data.buffer.asUint8List();
     final ImageProvider imageProvider = MemoryImage(Uint8List.fromList(bytes));
@@ -44,6 +45,7 @@ class ImageCacheResource {
       svg.cache.putIfAbsent(loader.cacheKey(null), () => loader.loadBytes(null));
     }else{
       precacheImage(imageProvider, context); // 이미지 캐싱
+      print('ghghgh jpg $path');
     }
   }
 }

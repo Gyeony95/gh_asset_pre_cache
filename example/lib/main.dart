@@ -1,4 +1,8 @@
+import 'package:example/pages/image_cache_page.dart';
+import 'package:example/pages/image_non_cache_page.dart';
+import 'package:example/pages/svg_non_cache_page.dart';
 import 'package:flutter/material.dart';
+import 'package:gh_asset_pre_cache/gh_asset_pre_cache.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,33 +21,21 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const FeatureList(),
-        FeatureEnum.svg.route: (context) => const SizedBox(),
+        FeatureEnum.svg.route: (context) => const SvgNonCachePage(),
         FeatureEnum.svgCache.route: (context) => const SizedBox(),
-        FeatureEnum.image.route: (context) => const SizedBox(),
-        FeatureEnum.imageCache.route: (context) => const SizedBox(),
+        FeatureEnum.image.route: (context) => const ImageNonCachePage(),
+        FeatureEnum.imageCache.route: (context) => const ImageCachePage(),
       },
     );
   }
 }
 
-class FeatureList extends StatefulWidget {
+class FeatureList extends StatelessWidget {
   const FeatureList({Key? key}) : super(key: key);
 
   @override
-  State<FeatureList> createState() => _FeatureListState();
-}
-
-class _FeatureListState extends State<FeatureList> {
-  late ScrollController _scrollController;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController = ScrollController();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    ImageCacheResource().startImageCache(context);
     return Scaffold(
       body: SafeArea(
         top: false,
@@ -81,7 +73,6 @@ class _FeatureListState extends State<FeatureList> {
     );
   }
 }
-
 
 enum FeatureEnum{
   svg('/svgs', 'svg non cache'),
