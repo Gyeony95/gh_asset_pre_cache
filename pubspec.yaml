@@ -1,7 +1,7 @@
 name: gh_asset_pre_cache
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/Gyeony95/gh_asset_pre_cache
 
 environment:
   sdk: '>=3.1.5 <4.0.0'

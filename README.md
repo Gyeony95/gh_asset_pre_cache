@@ -1,39 +1,43 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## Version 0.0.1 Release
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Automated Image Precache Feature Added: Automatically precache images from the application's asset folder to enhance performance.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+### Usage
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+1. Add the plugin to your project.
 
 ```dart
-const like = 'sample';
+dependencies:
+  gh_asset_pre_cache: ^0.0.1
 ```
 
-## Additional information
+2. Run the following command in the terminal to install the plugin.
+```dart
+flutter pub get
+```
+3. Call the plugin from any part of your app to automatically perform image precaching.
+```dart
+import 'package:gh_asset_pre_cache/gh_asset_pre_cache.dart';
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+// ...
+
+void precacheImages() {
+  GhAssetPreCache().startImageCache();
+}
+```
+
+### Note
+
+- This version provides basic automated precaching functionality.
+- Future updates will include more features and detailed configurations.
+
+### Bug Fixes
+
+- No bug fixes in this version.
+
+### Other Changes
+- This version marks the initial release of the plugin. Feedback and suggestions are welcome.
+
+Now, optimize your application's performance by automatically managing image precaching with this plugin! Expect more updates and features in the future. Feel free to provide feedback or report issues on the GitHub repository. Thank you!
+
+

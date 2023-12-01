@@ -4,12 +4,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ImageCacheResource {
+class GhAssetPreCache {
 
-  ImageCacheResource._internal();
-  static final ImageCacheResource _inst = ImageCacheResource._internal();
+  GhAssetPreCache._internal();
+  static final GhAssetPreCache _inst = GhAssetPreCache._internal();
 
-  factory ImageCacheResource() {
+  factory GhAssetPreCache() {
     return _inst;
   }
   bool isInit = false;

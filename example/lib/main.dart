@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gh_asset_pre_cache/gh_asset_pre_cache.dart';
 
 void main() {
-  ImageCacheResource().startImageCache();
+  GhAssetPreCache().startImageCache();
   runApp(const MyApp());
 }
 
