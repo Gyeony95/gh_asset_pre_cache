@@ -26,6 +26,13 @@ void precacheImages() {
 }
 ```
 
+### What is Different?
+
+<p align="center">
+<img src="https://github.com/Gyeony95/gh_asset_pre_cache/assets/46639812/b066c552-8732-4e77-a8fb-9cc103249df5">
+</p>
+
+
 ### Note
 
 - This version provides basic automated precaching functionality.
