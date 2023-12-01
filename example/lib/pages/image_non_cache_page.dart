@@ -1,3 +1,4 @@
+import 'package:example/main.dart';
 import 'package:flutter/material.dart';
 
 class ImageNonCachePage extends StatelessWidget {
@@ -6,7 +7,7 @@ class ImageNonCachePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: Text(FeatureEnum.image.name),),
       body: Center(
         child: Image.asset('assets/big_size_img.jpg'),
       ),
