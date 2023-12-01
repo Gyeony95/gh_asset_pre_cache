@@ -37,7 +37,7 @@ class GhAssetPreCache {
   }
 
   /// 이미지 전달받아서 캐싱함
-  Future<void> _imageCache(String path, BuildContext context) async {
+  void _imageCache(String path, BuildContext context) {
     bool isSvg = path.contains('.svg');
     if(isSvg){
       final loader = SvgAssetLoader(path);
